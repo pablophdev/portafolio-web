@@ -229,8 +229,10 @@ h1 span { display: block; color: transparent; background: linear-gradient(90deg,
 .tech-icon img { width: 23px; height: 23px; object-fit: contain; }
 .tech-item strong { font-size: 12px; font-weight: 500; color: #c9cfda; }
 
-.project-list { display: grid; gap: 26px; }
-.project-card { min-height: 500px; display: grid; grid-template-columns: 1.15fr .85fr; border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; background: rgba(13,17,27,.68); box-shadow: 0 30px 90px rgba(0,0,0,.22); transition: transform .45s ease, border-color .45s ease; }
+.project-list { display: grid; gap: 32px; }
+.project-card { width: min(850px, 78%); min-height: 500px; display: grid; grid-template-columns: 1.15fr .85fr; border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; background: rgba(13,17,27,.68); box-shadow: 0 30px 90px rgba(0,0,0,.22); transition: transform .45s ease, border-color .45s ease; }
+.project-card:nth-child(odd) { justify-self: start; }
+.project-card:nth-child(even) { justify-self: end; }
 .project-card:hover { transform: translateY(-6px); border-color: rgba(255,255,255,.18); }
 .project-card:nth-child(even) .project-visual { order: 2; }
 .project-card:nth-child(even) .project-content { order: 1; }
@@ -383,7 +385,7 @@ footer .brand { color: #c9ced9; }
   .profile-visual { min-height: 540px; }
   .profile-orb { width: 245px; height: 245px; }
   .about-intro { grid-template-columns: 1fr; gap: 18px; margin-top: 34px; }
-  .project-card { grid-template-columns: 1fr; }
+  .project-card { width: 100%; grid-template-columns: 1fr; }
   .project-card:nth-child(even) .project-visual { order: 1; }
   .project-card:nth-child(even) .project-content { order: 2; }
   .project-visual { min-height: 430px; }

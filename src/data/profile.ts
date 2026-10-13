@@ -4,7 +4,7 @@ export const profile = {
   initials: "PP",
   country: "Chile",
   countryCode: "CL",
-  email: "pedrophilimon.dev@gmail.com",
+  email: "pablophilimon@gmail.com",
   github: "https://github.com/pablophdev",
   linkedin: "https://www.linkedin.com/in/pedro-philimon/",
 }

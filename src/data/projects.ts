@@ -36,7 +36,7 @@ export const projects: Project[] = [
   },
   {
     index: "02",
-    title: "JA Joyería",
+    title: "jarodandre.cl",
     subtitle: "Comercio electrónico web",
     subtitleEn: "E-commerce Website",
     description:
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     credit: "Or Hakim / Unsplash",
     tone: "violet",
     repositoryUrl: profile.github,
-    projectUrl: "#contacto",
+    projectUrl: "https://jarodandre.pages.dev/",
   },
   {
     index: "03",

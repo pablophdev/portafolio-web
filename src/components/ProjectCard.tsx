@@ -7,6 +7,12 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, isSpanish }: ProjectCardProps) {
+  const isExternalProject = project.projectUrl?.startsWith("http")
+  const projectDomain =
+    isExternalProject && project.projectUrl
+      ? new URL(project.projectUrl).hostname
+      : `${project.title.toLowerCase().replaceAll(" ", "-")}.dev`
+
   return (
     <article className={`project-card reveal ${project.tone}`}>
       <div className="project-visual">
@@ -27,7 +33,7 @@ export default function ProjectCard({ project, isSpanish }: ProjectCardProps) {
             <i />
             <i />
           </div>
-          <span>{project.title.toLowerCase().replaceAll(" ", "-")}.dev</span>
+          <span>{projectDomain}</span>
         </div>
       </div>
       <div className="project-content">
@@ -43,7 +49,12 @@ export default function ProjectCard({ project, isSpanish }: ProjectCardProps) {
         </div>
         <div className="project-actions">
           {project.projectUrl && (
-            <a className="text-link" href={project.projectUrl}>
+            <a
+              className="text-link"
+              href={project.projectUrl}
+              target={isExternalProject ? "_blank" : undefined}
+              rel={isExternalProject ? "noreferrer" : undefined}
+            >
               {isSpanish ? "Ver proyecto" : "View project"}{" "}
               <Icon name="external" size={17} />
             </a>

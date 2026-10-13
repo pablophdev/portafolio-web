@@ -26,8 +26,8 @@ export const technologies = [
     ],
   },
   {
-    category: "Datos",
-    categoryEn: "Data",
+    category: "Bases de datos",
+    categoryEn: "Databases",
     number: "03",
     items: [
       { name: "MySQL", icon: "mysql/mysql-original.svg" },
@@ -40,6 +40,7 @@ export const technologies = [
     number: "04",
     items: [
       { name: "Docker", icon: "docker/docker-original.svg" },
+      { name: "Cloudflare", icon: "cloudflare/cloudflare-original.svg" },
       { name: "Git", icon: "git/git-original.svg" },
       { name: "GitHub", icon: "github/github-original.svg" },
       { name: "Linux", icon: "linux/linux-original.svg" },
